@@ -42,8 +42,8 @@ chain https://raw.githubusercontent.com/${github_user}/netboot.xyz-custom/master
 #boot || goto failed
 
 :option_hyper
-kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG initrd=initrd install=http://provision.mypbxnow.com/phone/rom/img/
-initrd http://provision.mypbxnow.com/phone/rom/img/EFI.IMG
+kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG initrd=EFI install=http://provision.mypbxnow.com/phone/rom/img/
+initrd http://provision.mypbxnow.com/phone/rom/img/EFI
 boot || goto failed
 
 
