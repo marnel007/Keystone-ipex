@@ -39,7 +39,7 @@ chain https://raw.githubusercontent.com/${github_user}/netboot.xyz-custom/master
 
 :option_DIR_hyper
 #kernel http://provision.mypbxnow.com/phone/rom/img/BOOT/LINUX26 initrd=initrd install=http://provision.mypbxnow.com/phone/rom/img/
-kernel http://provision.mypbxnow.com/phone/rom/img/BOOT/LINUX26 initrd=initrd install=http://provision.mypbxnow.com/phone/rom/img/
+kernel http://provision.mypbxnow.com/phone/rom/img/BOOT/LINUX26 install=http://provision.mypbxnow.com/phone/rom/img/
 initrd http://provision.mypbxnow.com/phone/rom/img/BOOT/INITRD.IMG
 boot || goto failed
 
