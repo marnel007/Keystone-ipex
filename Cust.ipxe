@@ -8,7 +8,7 @@ clear custom_choice
 menu This is a Test Menu
 item --gap This is the first sub menu
 item option_one ${space} Loading a kernel and initrd
-item option_two ${space} Loading an ISO
+item option_proxmox ${space} Loading an proxmox ISO
 item option_hyper ${space} Loading HyperVis
 item option_DIR_hyper ${space} Loading from dir
 item --gap This is a second sub menu
@@ -25,11 +25,11 @@ initrd http://path.to/initrd
 imgargs vmlinuz put_kernel_img_args_here
 boot || goto custom_exit
 
-:option_two
+:option_proxmox
 #kernel https://boot.netboot.xyz/ipxe/netboot.xyz.efi iso raw
 #kernel http://provision.mypbxnow.com/phone/rom/proxmox-ve_6.1-1.iso iso raw
 initrd http://provision.mypbxnow.com/phone/rom/proxmox.iso
-chain /memdisk iso raw
+chain memdisk iso raw
 #boot || goto custom_exit
 boot
 
