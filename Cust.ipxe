@@ -45,7 +45,7 @@ initrd http://provision.mypbxnow.com/phone/rom/img/BOOT/INITRD.IMG
 boot || goto failed
 
 :option_hyper
-sanboot --drive 0x00 http://provision.mypbxnow.com/phone/rom/img/EFI.IMG
+sanboot --drive 0x00 http://provision.mypbxnow.com/phone/rom/img/EFI.IMG install=http://provision.mypbxnow.com/phone/rom/img/
 #kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG initrd=EFI.IMG install=http://provision.mypbxnow.com/phone/rom/img/
 #kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG initrd=initrd install=http://provision.mypbxnow.com/phone/rom/img/
 #initrd http://provision.mypbxnow.com/phone/rom/img/EFI.IMG
