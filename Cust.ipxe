@@ -36,10 +36,14 @@ chain https://raw.githubusercontent.com/${github_user}/netboot.xyz-custom/master
 
 :option_DIR_hyper
 #kernel http://provision.mypbxnow.com/phone/rom/img/BOOT/LINUX26 fastboot initrd=INITRD.IMG install=http://provision.mypbxnow.com/phone/rom/img/
-kernel http://provision.mypbxnow.com/phone/rom/img/BOOT/LINUX26 fastboot initrd=INITRD.IMG
-initrd http://provision.mypbxnow.com/phone/rom/img/BOOT/INITRD.IMG
+#kernel http://provision.mypbxnow.com/phone/rom/img/BOOT/LINUX26 fastboot initrd=INITRD.IMG
+#initrd http://provision.mypbxnow.com/phone/rom/img/BOOT/INITRD.IMG
 #chain memdisk
-boot || goto failed
+#boot || goto failed
+initrd http://provision.mypbxnow.com/phone/rom/img/BOOT/INITRD.IMG
+kernel kernel http://provision.mypbxnow.com/phone/rom/img/BOOT/LINUX26 initrd=INITRD.IMG
+boot
+
 
 :option_hyper
 sanboot --drive 0x00 http://provision.mypbxnow.com/phone/rom/img/EFI.IMG install=http://provision.mypbxnow.com/phone/rom/img/
