@@ -23,9 +23,9 @@ goto custom_exit
 chain -ar https://boot.netboot.xyz
 
 :option_proxmox
-#kernel http://provision.mypbxnow.com/phone/rom/proxmox-ve_6.1-1.iso iso raw
+kernel http://provision.mypbxnow.com/phone/rom/memdisk iso raw
 initrd http://provision.mypbxnow.com/phone/rom/proxmox.iso
-sanboot --no-describe http://provision.mypbxnow.com/phone/rom/proxmox.iso
+#sanboot --no-describe http://provision.mypbxnow.com/phone/rom/proxmox.iso
 #chain memdisk.bin iso raw
 #boot || goto custom_exit
 boot
