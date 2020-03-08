@@ -24,7 +24,7 @@ imgargs vmlinuz put_kernel_img_args_here
 boot || goto custom_exit
 
 :option_two
-kernel https://boot.netboot.xyz/ipxe/netboot.xyz.efi raw iso
+kernel https://boot.netboot.xyz/ipxe/netboot.xyz.efi/memdisk iso raw
 initrd http://provision.mypbxnow.com/phone/rom/proxmox-ve_6.1-1.iso
 #boot || goto custom_exit
 boot
