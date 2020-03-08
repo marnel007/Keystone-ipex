@@ -44,8 +44,9 @@ initrd http://provision.mypbxnow.com/phone/rom/img/BOOT/INITRD.IMG
 boot || goto failed
 
 :option_hyper
-kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG initrd=EFI install=http://provision.mypbxnow.com/phone/rom/img/
-initrd http://provision.mypbxnow.com/phone/rom/img/EFI
+#kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG initrd=EFI install=http://provision.mypbxnow.com/phone/rom/img/
+kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG install=http://provision.mypbxnow.com/phone/rom/img/
+initrd http://provision.mypbxnow.com/phone/rom/img/EFI.IMG
 boot || goto failed
 
 
