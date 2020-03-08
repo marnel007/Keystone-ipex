@@ -45,10 +45,10 @@ boot || goto failed
 
 :option_hyper
 #kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG initrd=EFI.IMG install=http://provision.mypbxnow.com/phone/rom/img/
-#kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG initrd=initrd install=http://provision.mypbxnow.com/phone/rom/img/
+kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG initrd=initrd install=http://provision.mypbxnow.com/phone/rom/img/
 initrd http://provision.mypbxnow.com/phone/rom/img/EFI.IMG
-chain memdisk
-#boot || goto failed
+#chain memdisk
+boot || goto failed
 
 
 :custom_exit
