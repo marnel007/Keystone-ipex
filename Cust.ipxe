@@ -10,6 +10,7 @@ item --gap This is the first sub menu
 item option_one ${space} Loading a kernel and initrd
 item option_two ${space} Loading an ISO
 item option_hyper ${space} Loading HyperVis
+item option_DIR_hyper ${space} Loading from dir
 item --gap This is a second sub menu
 item option_three ${space} Loads another custom sub menu
 item option_four ${space} This is option four
@@ -36,10 +37,10 @@ boot
 echo Chains into another menu...
 chain https://raw.githubusercontent.com/${github_user}/netboot.xyz-custom/master/custom1.ipxe || goto custom
 
-#:option_hyper
-#kernel http://provision.mypbxnow.com/phone/rom/img/BOOT/LINUX26 initrd=initrd install=http://provision.mypbxnow.com/phone/rom/img/
-#initrd http://provision.mypbxnow.com/phone/rom/img/BOOT/INITRD
-#boot || goto failed
+:option_DIR_hyper
+kernel http://provision.mypbxnow.com/phone/rom/img/BOOT/LINUX26 initrd=initrd install=http://provision.mypbxnow.com/phone/rom/img/
+initrd http://provision.mypbxnow.com/phone/rom/img/BOOT/INITRD
+boot || goto failed
 
 :option_hyper
 kernel http://provision.mypbxnow.com/phone/rom/img/EFI.IMG initrd=EFI install=http://provision.mypbxnow.com/phone/rom/img/
