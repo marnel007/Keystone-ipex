@@ -24,7 +24,7 @@ goto custom_exit
 #chain tftp://45.76.14.106/
 #default xenserver
 #label xenserver
-kernel http://45.76.14.106/custpxe/mboot.c32 
+kernel http://45.76.14.106/custpxe/isolinux/mboot.c32 
 append http://45.76.14.106/custpxe/xcp-ng/xen.gz dom0_max_vcpus=1-2 dom0_mem=1024M,max:1024M com1=115200,8n1 console=com1,vga --- http://45.76.14.106/custpxe/xcp-ng/vmlinuz xencons=hvc console=hvc0 console=tty0 answerfile=http://45.76.14.106/custpxe/key.ans install --- http://45.76.14.106/custpxe/xcp-ng/install.img
 
 :option_proxmox
