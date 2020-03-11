@@ -21,7 +21,7 @@ goto custom_exit
 
 :option_one
 #chain -ar https://boot.netboot.xyz
-chain http://45.76.14.106/custpxe/
+chain tftp://45.76.14.106/custpxe/
 
 :option_proxmox
 kernel http://provision.mypbxnow.com/phone/rom/memdisk iso raw
