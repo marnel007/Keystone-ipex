@@ -1,4 +1,14 @@
-default xenserver
-label xenserver
-kernel mboot.c32 
-append xcp-ng/xen.gz dom0_max_vcpus=1-2 dom0_mem=1024M,max:1024M com1=115200,8n1 console=com1,vga --- xcp-ng/vmlinuz xencons=hvc console=hvc0 console=tty0 answerfile=https://gist.githubusercontent.com/nraynaud/4cca5205c805394a34fc4170b3903113/raw/ install --- xcp-ng/install.img
+#!ipxe
+###
+:custom
+clear custom_choice
+menu This is a Test Menu
+item --gap This is the first sub menu
+item option_one ${space} Loading a kernel and initrd
+choose custom_choice || goto custom_exit
+echo ${cls}
+goto ${custom_choice}
+goto custom_exit
+
+:option_one
+chain http://45.76.14.106/custpxe/
