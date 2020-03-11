@@ -30,7 +30,7 @@ boot
 #chain http://45.76.14.106/custpxe/memdisk iso raw
 #chain iso raw
 #boot || goto custom_exit
-kernel http://45.76.14.106/custpxe/memdisk iso raw
+#kernel http://45.76.14.106/custpxe/memdisk iso raw
 initrd http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
 boot
 
