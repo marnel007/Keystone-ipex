@@ -20,7 +20,7 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-sanboot --drive 0x00 http://45.76.14.106/custpxe/xcp-ng-8.0.0-netinstall.iso
+sanboot --no-describe --drive 0x00 http://45.76.14.106/custpxe/xcp-ng-8.0.0-netinstall.iso
 boot
 
 
