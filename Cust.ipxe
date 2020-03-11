@@ -25,11 +25,10 @@ chain tftp://45.76.14.106/
 
 
 :option_proxmox
-#kernel http://provision.mypbxnow.com/phone/rom/memdisk iso raw
-#initrd http://provision.mypbxnow.com/phone/rom/proxmox.iso
-sanhook --drive 0xA0 --no-describe http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
-#initrd http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
+#sanhook --drive 0xA0 --no-describe http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
+initrd http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
 #chain memdisk.bin iso raw
+chain iso raw
 #boot || goto custom_exit
 #boot
 
