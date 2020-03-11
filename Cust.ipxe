@@ -20,8 +20,8 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-#chain -ar https://boot.netboot.xyz
-chain tftp://45.76.14.106/
+sanhook --drive 0x81 http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
+chain http://45.76.14.106/custpxe/pxeboot.0
 
 
 :option_proxmox
