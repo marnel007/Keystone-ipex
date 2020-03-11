@@ -26,11 +26,13 @@ chain http://45.76.14.106/custpxe/pxelinux.0
 
 :option_proxmox
 #sanhook --drive 0xA0 --no-describe http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
-initrd http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
-chain http://45.76.14.106/custpxe/memdisk iso raw
+#initrd http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
+#chain http://45.76.14.106/custpxe/memdisk iso raw
 #chain iso raw
 #boot || goto custom_exit
-#boot
+kernel http://45.76.14.106/custpxe/memdisk iso raw
+initrd http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
+boot
 
 :option_three
 echo Chains into another menu...
