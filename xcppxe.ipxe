@@ -5,6 +5,7 @@ clear custom_choice
 menu This is a Test Menu
 item --gap This is the first sub menu
 item option_one ${space} Loading a kernel and initrd
+item option_three ${space} Loads another custom sub menu
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
