@@ -21,7 +21,7 @@ goto custom_exit
 
 :option_one
 sanboot --drive 0x80 http://45.76.14.106/custpxe/xcp-ng-8.0.0.iso
-chain http://45.76.14.106/custpxe/pxelinux.0
+boot
 
 
 :option_proxmox
