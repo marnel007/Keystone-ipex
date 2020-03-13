@@ -1,6 +1,9 @@
 #!ipxe
-set base http://147.75.77.133/xcp-beta
-kernel ${base}/boot/efiboot dom0_max_vcpus=1-2 dom0_mem=max:752M answerfile=http://147.75.77.133/xcp-ng/answerfile.xml console=ttyS1,115200,vga
-module ${base}/boot/xen.gz xencons=ttyS console=ttyS1,115200,vga
-module ${base}/install.img
+#set base http://147.75.77.133/xcp-beta
+set base http://45.76.14.106/custpxe
+#kernel ${base}/boot/efiboot dom0_max_vcpus=1-2 dom0_mem=max:752M answerfile=http://147.75.77.133/xcp-ng/answerfile.xml console=ttyS1,115200,vga
+kernel ${base}/xcp-ng/xen.gz dom0_mem=1024M,max:1024M watchdog dom0_max_vcpus=4 com1=115200,8n1 console=com1,vga
+#module ${base}/boot/xen.gz xencons=ttyS console=ttyS1,115200,vga
+module ${base}/xcp-ng/vmlinuz console=hvc0
+module ${base}/xcp-ng/install.img
 boot
