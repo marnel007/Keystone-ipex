@@ -1,6 +1,6 @@
 #!ipxe
 set base http://147.75.77.133/xcp-beta
-kernel ${base}/boot/vmlinuz dom0_max_vcpus=1-2 dom0_mem=max:752M answerfile=http://147.75.77.133/xcp-ng/answerfile.xml console=ttyS1,115200,vga
+kernel ${base}/boot/efiboot dom0_max_vcpus=1-2 dom0_mem=max:752M answerfile=http://147.75.77.133/xcp-ng/answerfile.xml console=ttyS1,115200,vga
 module ${base}/boot/xen.gz xencons=ttyS console=ttyS1,115200,vga
 module ${base}/install.img
 boot
