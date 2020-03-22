@@ -1,15 +1,3 @@
 #!ipxe
-###
-:custom
-clear custom_choice
-menu This is a Test Menu
-item --gap This is the first sub menu
-item option_one ${space} Loading a kernel and initrd
-item option_three ${space} Loads another custom sub menu
-choose custom_choice || goto custom_exit
-echo ${cls}
-goto ${custom_choice}
-goto custom_exit
-
-:option_one
-chain http://45.76.14.106/custpxe/
+sanboot --no-describe --drive 0x00 http://147.75.77.133/xcp-ng-8-0-0.iso
+boot
